@@ -1,0 +1,28 @@
+.container {
+  text-shadow: 0 0 10px #9ecaed;
+  text-align: center;
+}
+
+.reactions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-transform: capitalize;
+}
+
+.total {
+  display: block;
+  padding-top: 20px;
+}
+
+.total::before,
+.total::after {
+  content: " ⎯ ";
+}
+
+.container span {
+  display: block;
+  padding-top: 10px;
+  font-size: 50px;
+}

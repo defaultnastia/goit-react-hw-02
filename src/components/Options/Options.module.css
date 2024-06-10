@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.container button {
+  font-size: 20px;
+  border: 2px solid #dadada;
+  border-radius: 7px;
+  box-shadow: 0 0 10px #9ecaed;
+  background-color: transparent;
+  padding: 5px 20px;
+  transition: 0.3s;
+  transition-property: transform, background-color;
+  text-transform: capitalize;
+}
+
+.container button:hover {
+  transform: scale(1.05);
+  background-color: #ffffffa9;
+}
+
+.reactions {
+  display: flex;
+  gap: 50px;
+}
+
+.reset {
+  color: #920d25;
+  box-shadow: 0 0 10px #7e0a1f;
+}
