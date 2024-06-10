@@ -1,5 +1,5 @@
 {
-  "name": "goit-react-hw-01",
+  "name": "goit-react-hw-02",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "three": "^0.121.0",
+    "vanta": "^0.5.24"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

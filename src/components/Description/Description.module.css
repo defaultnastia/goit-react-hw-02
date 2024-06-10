@@ -1,0 +1,16 @@
+.header {
+  margin-bottom: 10px;
+}
+
+.header span {
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+}
+
+.container {
+  margin-bottom: 50px;
+  padding: 20px;
+  border: 2px solid #dadada;
+  border-radius: 7px;
+  box-shadow: 0 0 10px #9ecaed;
+}
