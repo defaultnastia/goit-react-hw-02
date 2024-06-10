@@ -1,6 +1,6 @@
 import { Description, Options, Feedback, Notification } from "components";
 import { Background } from "./components/Background/Background";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const defaultReactions = {
   good: 0,
@@ -8,8 +8,27 @@ const defaultReactions = {
   bad: 0,
 };
 
+// <== YOU CAN TEST (reset reviews/storage first) ==>
+// Add one more reaction to "defaultReactions" to test scalability, though the satisfaction calculation is still too poor: (
+
+// const defaultReactions = {
+//   good: 0,
+//   neutral: 0,
+//   bad: 0,
+//   awful: 0,
+// };
+
 const App = () => {
-  const [reviews, setReviews] = useState(defaultReactions);
+  const [reviews, setReviews] = useState(() => {
+    const savedReviews = window.localStorage.getItem("reviews");
+    if (savedReviews) return JSON.parse(savedReviews);
+
+    return defaultReactions;
+  });
+
+  useEffect(() => {
+    window.localStorage.setItem("reviews", JSON.stringify(reviews));
+  }, [reviews]);
 
   const updateFeedback = (feedbackType) => {
     setReviews({
